@@ -1,35 +1,31 @@
 #include <stdio.h>
 
-
 /**
 * main - Entry point
 *
-* Description: This program prints the first 100 Fibonacci numbers.
-* Each number is separated by a comma.
+* Description: Print the first 98 Fibonacci numbers
 *
 * Return: Always 0
 */
-
 int main(void)
 {
-int first = 1, second = 2;
-int next, count;
-printf("%d, %d, ", first, second);
+unsigned long first = 1;
+unsigned long second = 2;
+unsigned long next;
+int count;
 
+printf("%lu, %lu", first, second);
 
-for (count = 3; count <= 98; ++count)
+for (count = 3; count <= 98; count++)
 {
 next = first + second;
-if (count != 98)
-printf("%d, ", next);
-else
-printf("%d\n", next);
-
+printf(", %lu", next);
 
 first = second;
 second = next;
 }
 
+printf("\n");
 
 return (0);
 }
