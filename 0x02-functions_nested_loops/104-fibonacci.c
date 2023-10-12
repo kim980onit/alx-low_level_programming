@@ -16,7 +16,7 @@ int count;
 
 printf("%lu, %lu", first, second);
 
-for (count = 3; count <= 96; count++)
+for (count = 4; count <= 98; count++)
 {
 next = first + second;
 printf(", %lu", next);
