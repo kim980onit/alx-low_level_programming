@@ -10,13 +10,12 @@
 * Return: Always 0
 */
 
-#include <stdio.h>
-
 int main(void)
 {
 int first = 1, second = 2;
 int next, count;
 printf("%d, %d, ", first, second);
+
 
 for (count = 3; count <= 98; ++count)
 {
@@ -26,9 +25,11 @@ printf("%d, ", next);
 else
 printf("%d\n", next);
 
+
 first = second;
 second = next;
 }
+
 
 return (0);
 }
