@@ -2,7 +2,7 @@
 /**
  * swap_int - function that swaps the values of two integers
  * @a:firstparemer
- * @:secondparemeter
+ * @b:secondparemeter
  */
 
 void swap_int(int *a, int *b)
