@@ -6,7 +6,7 @@
  *
  * @size: first paremeter of an input for the size of the array in int
  * @c: second paremeter store strings of the characters
- * 
+ *
  * Return:c
  */
 
