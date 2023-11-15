@@ -3,7 +3,7 @@
 
 /**
  * alloc_grid -function that returns a pointer to a 2 dimensional array
- * of integers
+ * of integersi
  *
  * @width:firstparemeter
  * @height:secondparemeter
@@ -27,9 +27,9 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	}
 
-	for (int i = 0; i < height; i++)
+	for (i = 0; i < height; i++)
 	{
-		gridout[i] = (int *)malloc(width * sizeof(int));
+		gridout[i] = malloc(width * sizeof(int));
 		if (gridout[i] == NULL)
 		{
 			for (i--; i >= 0; i--)
@@ -40,12 +40,8 @@ int **alloc_grid(int width, int height)
 	}
 
 	for (i = 0; i < height; i++)
-	{
 		for (j = 0; j < width; j++)
-		{
 			gridout[i][j] = 0;
-		}
-	}
 
 	return (gridout);
 }
