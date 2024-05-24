@@ -1,0 +1,36 @@
+#include "lists.h"
+/**
+ * add_dnodeint_end - adds a new node at the end of the dlistint_t list
+ *
+ * @head: parmeter of the head of the list
+ * @n: parmeter for element value
+ * Return:address of the new element
+ */
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+{
+	dlistint_t *new;
+	dlistint_t *nn;
+
+	new = mallaoc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+	new->n = n;
+	new->next = NULL;
+
+	nn = *head;
+
+	if (nn != NULL)
+	{
+		while (nn->next != NULL)
+			nn = nn->next;
+		nn->next = new;
+	}
+	else
+	{
+		*head = new;
+	}
+
+	new->prev = hd;
+
+	return (new);
+}
